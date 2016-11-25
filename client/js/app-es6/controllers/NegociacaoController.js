@@ -1,3 +1,12 @@
+ import {ListaNegociacoes} from '../models/ListaNegociacoes';
+ import {Mensagem} from '../models/Mensagem';
+ import {NegociacoesView} from '../views/negociacoesView';
+ import {MensagemView} from '../views/MensagemView';
+ import {NegociacaoService} from '../services/NegociacaoService';
+ import {DateHelper} from '../helpers/DateHelper';
+ import {Bind} from '../helpers/Bind';
+ import {Negociacao} from '../models/Negociacao';
+ 
  class NegociacaoController {
 
     constructor(){
@@ -94,3 +103,8 @@
     }       
 }
 
+let negociacaoController = new NegociacaoController();
+
+export function currentInstance(){
+    return negociacaoController;
+}
